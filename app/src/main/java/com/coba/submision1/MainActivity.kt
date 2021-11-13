@@ -39,9 +39,9 @@ class MainActivity : AppCompatActivity() {
                     dataAvatar.getResourceId(i, -1),
                     dataLocation[i],
                     dataCompany[i],
-                    dataRepository.getIndex(i),
-                    dataFollowers.getResourceId(i, -1),
-                    dataFollowing.getResourceId(i, -1)
+                    dataRepository.getInt(i, -1),
+                    dataFollowers.getInt(i, -1),
+                    dataFollowing.getInt(i, -1)
 
                    )
                 listHero.add(user)

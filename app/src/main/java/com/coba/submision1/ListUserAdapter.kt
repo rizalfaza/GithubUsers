@@ -17,28 +17,27 @@ class ListUserAdapter(private val listUser: ArrayList<User>) : RecyclerView.Adap
     }
 
     override fun onBindViewHolder(holder: ListViewHolder, position: Int) {
-        val(name, username, avatar) =listUser[position]
-        holder.imgPhoto.setImageResource(avatar)
-        holder.tvName.text = name
-        holder.tvUsername.text = username
-        Log.d("cekcekcek", listUser[position].toString()    )
+        holder.bind(listUser[position])
     }
 
     override fun getItemCount(): Int = listUser.size
 
-    class ListViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView),
-        View.OnClickListener{
+    class ListViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView){
         var imgPhoto: ImageView = itemView.findViewById(R.id.img_avatar)
         var tvName : TextView = itemView.findViewById(R.id.tv_name)
         var tvUsername: TextView = itemView.findViewById(R.id.tv_username)
 
-        init {
-            itemView.setOnClickListener(this)
+        fun bind(user: User) {
+            imgPhoto.setImageResource(user.avatar)
+            tvName.text = user.name
+            tvUsername.text = user.username
+
+            itemView.setOnClickListener {
+                val intent = Intent(itemView.context, DetailActivity::class.java)
+                intent.putExtra(DetailActivity.KEY_DATA, user)
+                itemView.context.startActivity(intent)
+            }
         }
 
-        override fun onClick(v: View?) {
-            val intent = Intent(itemView.context, DetailActivity::class.java)
-            itemView.context.startActivity(intent)
-        }
     }
 }

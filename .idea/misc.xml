@@ -3,7 +3,10 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/Muhammad Rizki/submision1/app/src/main/res/layout/activity_detail.xml" value="0.12771739130434784" />
+        <entry key="..\:/Users/Muhammad Rizki/submision1/app/src/main/res/layout/activity_detail.xml" value="0.33" />
+        <entry key="..\:/Users/Muhammad Rizki/submision1/app/src/main/res/layout/activity_main.xml" value="0.209375" />
+        <entry key="..\:/Users/Muhammad Rizki/submision1/app/src/main/res/layout/item_detail_user.xml" value="0.67" />
+        <entry key="..\:/Users/Muhammad Rizki/submision1/app/src/main/res/layout/item_row_user.xml" value="0.209375" />
       </map>
     </option>
   </component>
